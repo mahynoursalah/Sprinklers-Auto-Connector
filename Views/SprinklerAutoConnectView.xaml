@@ -1,0 +1,188 @@
+﻿<Window
+    x:Class="Sprinklers_Connectors.Views.SprinklerAutoConnectView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Sprinkler AutoConnect"
+    Width="300"
+    Height="640"
+    Background="{DynamicResource BackgroundBrush}"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Sprinklers Connectors;component/Resources/Colors.xaml" />
+                <ResourceDictionary Source="/Sprinklers Connectors;component/Resources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="6" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="6" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="6" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock
+                FontSize="15"
+                Style="{StaticResource TitleStyle}"
+                Text="Sprinkler AutoConnect" />
+
+            <TextBlock
+                Margin="0,2,0,0"
+                FontSize="10.5"
+                Foreground="{StaticResource SubtitleBrush}"
+                Text="Automatically connect unconnected sprinklers to nearby fire protection pipes."
+                TextWrapping="Wrap" />
+        </StackPanel>
+
+        <Border Grid.Row="2" Style="{StaticResource CardStyle}">
+            <StackPanel>
+                <Grid Margin="0,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="11" Text="Total Sprinklers" />
+                    <TextBlock
+                        Grid.Column="1"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource TotalBrush}"
+                        Text="{Binding TotalSprinklers}" />
+                </Grid>
+
+                <Separator Margin="0,2" />
+
+                <Grid Margin="0,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="11" Text="Unconnected" />
+                    <TextBlock
+                        Grid.Column="1"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource UnconnectedBrush}"
+                        Text="{Binding UnconnectedSprinklers}" />
+                </Grid>
+
+                <Separator Margin="0,2" />
+
+                <Grid Margin="0,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="11" Text="Connected" />
+                    <TextBlock
+                        Grid.Column="1"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource ConnectedBrush}"
+                        Text="{Binding Connected}" />
+                </Grid>
+
+                <Separator Margin="0,2" />
+
+                <Grid Margin="0,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="11" Text="Failed" />
+                    <TextBlock
+                        Grid.Column="1"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="{StaticResource FailedBrush}"
+                        Text="{Binding Failed}" />
+                </Grid>
+
+                <Separator Margin="0,2" />
+
+                <Grid Margin="0,1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock FontSize="11" Text="Fire Protection Pipes" />
+                    <TextBlock
+                        Grid.Column="1"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Text="{Binding TotalPipes}" />
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="4" Style="{StaticResource CardStyle}">
+            <StackPanel>
+                <TextBlock
+                    Margin="0,0,0,4"
+                    FontSize="12.5"
+                    FontWeight="SemiBold"
+                    Text="Actions" />
+
+                <Button
+                    Height="28"
+                    Command="{Binding AutoConnectCommand}"
+                    Content="Connect Sprinklers"
+                    Style="{StaticResource PrimaryButtonStyle}" />
+
+                <Button
+                    Height="24"
+                    Margin="0,4,0,0"
+                    Command="{Binding ScanModelCommand}"
+                    Content="Scan Model"
+                    Style="{StaticResource SecondaryButtonStyle}" />
+
+                <Button
+                    Height="24"
+                    Margin="0,4,0,0"
+                    Command="{Binding ReScanCommand}"
+                    Content="Re-Scan"
+                    Style="{StaticResource SecondaryButtonStyle}" />
+
+                <Button
+                    Height="24"
+                    Margin="0,4,0,0"
+                    Command="{Binding SelectUnconnectedCommand}"
+                    Content="Select Unconnected"
+                    Style="{StaticResource SecondaryButtonStyle}" />
+
+                <Button
+                    Height="24"
+                    Margin="0,4,0,0"
+                    Command="{Binding SelectFailedCommand}"
+                    Content="Select Failed"
+                    Style="{StaticResource SecondaryButtonStyle}" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="6" Style="{StaticResource CardStyle}">
+            <StackPanel>
+                <TextBlock
+                    Margin="0,0,0,4"
+                    FontSize="12.5"
+                    FontWeight="SemiBold"
+                    Text="Status" />
+
+                <TextBlock
+                    FontSize="11"
+                    Foreground="{StaticResource SubtitleBrush}"
+                    Text="{Binding StatusMessage, Mode=OneWay}"
+                    TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

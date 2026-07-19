@@ -1,0 +1,14 @@
+<RevitAddIns>
+    <AddIn Type="Application">
+        <Name>Sprinklers Connectors</Name>
+        <Assembly>Sprinklers Connectors\Sprinklers Connectors.dll</Assembly>
+        <AddInId>6DAEEAA0-FB4F-4C09-8079-BE8D989A3590</AddInId>
+        <FullClassName>Sprinklers_Connectors.Application</FullClassName>
+        <VendorId>Development</VendorId>
+        <VendorDescription></VendorDescription>
+    </AddIn>
+    <ManifestSettings>
+        <UseRevitContext>False</UseRevitContext>
+        <ContextName>Sprinklers Connectors</ContextName>
+    </ManifestSettings>
+</RevitAddIns>

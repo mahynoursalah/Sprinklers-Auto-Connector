@@ -1,0 +1,48 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ================= Background ================= -->
+
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#F5F6F8"/>
+    <SolidColorBrush x:Key="CardBrush" Color="#FFFFFF"/>
+
+    <!-- ================= Text ================= -->
+
+    <SolidColorBrush x:Key="TitleBrush" Color="#1F2937"/>
+    <SolidColorBrush x:Key="SubtitleBrush" Color="#6B7280"/>
+
+    <!-- ================= Border ================= -->
+
+    <SolidColorBrush x:Key="BorderBrush" Color="#E5E7EB"/>
+
+    <!-- ================= Primary ================= -->
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="gray"/>
+    <SolidColorBrush x:Key="PrimaryHoverBrush" Color="Gray"/>
+
+    <!-- ================= Statistics ================= -->
+
+    <SolidColorBrush x:Key="TotalBrush" Color="#374151"/>
+
+    <SolidColorBrush x:Key="UnconnectedBrush"
+                     Color="#C97A00"/>
+
+    <SolidColorBrush x:Key="ConnectedBrush"
+                     Color="#2E7D32"/>
+
+    <SolidColorBrush x:Key="FailedBrush"
+                     Color="#C62828"/>
+
+    <!-- ================= Status ================= -->
+
+    <SolidColorBrush x:Key="SuccessBrush"
+                     Color="#2E7D32"/>
+
+    <SolidColorBrush x:Key="WarningBrush"
+                     Color="#C97A00"/>
+
+    <SolidColorBrush x:Key="ErrorBrush"
+                     Color="#C62828"/>
+
+</ResourceDictionary>

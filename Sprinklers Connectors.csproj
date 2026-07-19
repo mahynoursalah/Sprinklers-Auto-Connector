@@ -1,0 +1,38 @@
+﻿<Project Sdk="Nice3point.Revit.Sdk/6.2.2">
+
+    <PropertyGroup>
+        <UseWPF>true</UseWPF>
+        <DeployAddin>true</DeployAddin>
+        <LaunchRevit>true</LaunchRevit>
+        <IsRepackable>true</IsRepackable>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <Configurations>Debug.R23;Debug.R24;Debug.R25;Debug.R26;Debug.R27</Configurations>
+        <Configurations>$(Configurations);Release.R23;Release.R24;Release.R25;Release.R26;Release.R27</Configurations>
+        <RootNamespace>Sprinklers_Connectors</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Revit Dependencies -->
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+        <PackageReference Include="Nice3point.Revit.Toolkit" Version="$(RevitVersion).*" />
+        <PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*" />
+        <PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*" />
+        <PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*" />
+
+        <!-- Application Hosting -->
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.7" />
+
+        <!-- Build Automation-->
+        <PackageReference Include="ILRepack" Version="2.0.44" />
+
+        <!-- Development Dependencies -->
+        <PackageReference Include="JetBrains.Annotations" Version="2025.2.4" PrivateAssets="all" />
+        <PackageReference Include="Polyfill" Version="10.5.1" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="Resources\Icons\RibbonIcon16.png" />
+        <Resource Include="Resources\Icons\RibbonIcon32.png" />
+    </ItemGroup>
+
+</Project>
