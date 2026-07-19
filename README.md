@@ -80,7 +80,7 @@ The project is currently being enhanced with more advanced routing rules and MEP
 ```text
 • Advanced pipe routing optimization
 • Support for more complex sprinkler layouts
-• Automatic pipe sizing based on design rules
+• Automatic pipe sizing based on design rules (currently branch pipes default to the main pipe's diameter as a safe fallback)
 • Enhanced error reporting and diagnostics
 • Additional fire protection system automation tools
 ```
