@@ -84,3 +84,4 @@ The project is currently being enhanced with more advanced routing rules and MEP
 • Enhanced error reporting and diagnostics
 • Additional fire protection system automation tools
 ```
+<img width="1243" height="621" alt="image" src="https://github.com/user-attachments/assets/f119b8af-49f6-4693-b148-6cb682877fca" />
